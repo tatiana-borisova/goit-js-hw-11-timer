@@ -6,11 +6,12 @@ body {
 }
 .timer {
   text-align: center;
-  height: 170px;
-  width: 100%;
+  height: 160px;
+  width: 90%;
+  border-radius: 10px;
   margin: 0 auto;
+  background-color: rgba(72, 122, 75, 0.5);
   background: url('https://i.siteapi.org/r_oEFJydpQvSDsbs01r-pKnRIdw=/0x0:600x437/88b6ade8d505f91.s.siteapi.org/img/1iwvih66a1wggs0c8cog8sg8ckcs88');
-  background-color: rgba(255, 255, 255, 0.2);
   cursor: default;
 }
 
@@ -41,7 +42,5 @@ body {
   border-radius: 10px;
   width: 200px;
   height: 20px;
-  display: flex;
-  align-items: center;
-  display: inline-block;
+  margin: 0 auto;
 }
