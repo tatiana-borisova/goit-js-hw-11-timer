@@ -1,17 +1,16 @@
-//variables
-const refs = {
-  divEl: document.querySelector('#timer-1'),
-  daysEl: document.querySelector('[data-value="days"]'),
-  hoursEl: document.querySelector('[data-value="hours"]'),
-  minsEl: document.querySelector('[data-value="mins"]'),
-  secsEl: document.querySelector('[data-value="secs"]'),
-  textEl: document.querySelector('.text'),
-};
-
 class CountdownTimer {
   constructor({ selector, targetDate }) {
+    this.refs = {
+      divEl: document.querySelector('#timer-1'),
+      daysEl: document.querySelector('[data-value="days"]'),
+      hoursEl: document.querySelector('[data-value="hours"]'),
+      minsEl: document.querySelector('[data-value="mins"]'),
+      secsEl: document.querySelector('[data-value="secs"]'),
+      textEl: document.querySelector('.text'),
+    };
     this.selector = selector;
     this.targetDate = targetDate;
+    this.start();
   }
 
   start() {
@@ -39,12 +38,12 @@ class CountdownTimer {
 
   updateClock({ days, hours, mins, secs }) {
     if (this.targetDate > Date.now()) {
-      refs.daysEl.textContent = days;
-      refs.hoursEl.textContent = hours;
-      refs.minsEl.textContent = mins;
-      refs.secsEl.textContent = secs;
+      this.refs.daysEl.textContent = days;
+      this.refs.hoursEl.textContent = hours;
+      this.refs.minsEl.textContent = mins;
+      this.refs.secsEl.textContent = secs;
     } else {
-      refs.textEl.textContent = 'Happy New Year!';
+      this.refs.textEl.textContent = 'Happy New Year!';
     }
   }
 }
@@ -53,5 +52,3 @@ const countdownTimer = new CountdownTimer({
   selector: '#timer-1',
   targetDate: new Date('January 1, 2022'),
 });
-
-countdownTimer.start();
