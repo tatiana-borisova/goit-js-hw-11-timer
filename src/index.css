@@ -6,12 +6,15 @@ body {
 }
 .timer {
   text-align: center;
-  height: 160px;
+  padding-bottom: 10px;
+  height: 100%;
   width: 90%;
   border-radius: 10px;
   margin: 0 auto;
   background-color: rgba(72, 122, 75, 0.5);
   background: url('https://i.siteapi.org/r_oEFJydpQvSDsbs01r-pKnRIdw=/0x0:600x437/88b6ade8d505f91.s.siteapi.org/img/1iwvih66a1wggs0c8cog8sg8ckcs88');
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: default;
 }
 
