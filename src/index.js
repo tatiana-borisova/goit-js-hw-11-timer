@@ -5,6 +5,7 @@ const refs = {
   hoursEl: document.querySelector('[data-value="hours"]'),
   minsEl: document.querySelector('[data-value="mins"]'),
   secsEl: document.querySelector('[data-value="secs"]'),
+  textEl: document.querySelector('.text'),
 };
 
 class CountdownTimer {
@@ -37,10 +38,14 @@ class CountdownTimer {
   }
 
   updateClock({ days, hours, mins, secs }) {
-    refs.daysEl.textContent = days;
-    refs.hoursEl.textContent = hours;
-    refs.minsEl.textContent = mins;
-    refs.secsEl.textContent = secs;
+    if (this.targetDate > Date.now()) {
+      refs.daysEl.textContent = days;
+      refs.hoursEl.textContent = hours;
+      refs.minsEl.textContent = mins;
+      refs.secsEl.textContent = secs;
+    } else {
+      refs.textEl.textContent = 'Happy New Year!';
+    }
   }
 }
 
