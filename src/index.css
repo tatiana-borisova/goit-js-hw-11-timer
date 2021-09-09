@@ -12,7 +12,8 @@ body {
   border-radius: 10px;
   margin: 10px auto;
   background-color: rgba(72, 122, 75, 0.5);
-  background: url('https://i.siteapi.org/r_oEFJydpQvSDsbs01r-pKnRIdw=/0x0:600x437/88b6ade8d505f91.s.siteapi.org/img/1iwvih66a1wggs0c8cog8sg8ckcs88');
+  background-image: linear-gradient(to right, rgba(68, 88, 72, 0.5), rgba(94, 66, 66, 0.5)),
+    url('https://i.siteapi.org/r_oEFJydpQvSDsbs01r-pKnRIdw=/0x0:600x437/88b6ade8d505f91.s.siteapi.org/img/1iwvih66a1wggs0c8cog8sg8ckcs88');
   background-repeat: no-repeat;
   background-size: cover;
   cursor: default;
